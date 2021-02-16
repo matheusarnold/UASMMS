@@ -21,7 +21,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         table.register(WordTableViewCell.nib(), forCellReuseIdentifier: WordTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
-        self.searchBar.delegate = self
+        searchBar.delegate = self
         
         searchBar.addTarget(self, action: #selector(checkAndDisplayError(textfield:)), for: .editingChanged)
         // Do any additional setup after loading the view.
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     // Return Key
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchWord()
-        return (true)
+        return true
     }
     
     func searchWord(){
@@ -49,39 +49,34 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         words.removeAll()
         
-        URLSession.shared.dataTask(with: URL(string: "https://myawesomedictionary.herokuapp.com/words?q=\(query)")!,
-                                   completionHandler: {data, response, error in
-                                    guard let data = data, error == nil else {
-                                        return
-                                    }
+        URLSession.shared.dataTask(with: URL(string: "https://myawesomedictionary.herokuapp.com/words?q=\(query)")!, completionHandler: {data, response, error in guard let data = data, error == nil else {
+            return
+        }
+        // Data convert
+        var result: WordResult?
+        
+        do {
+            result = try JSONDecoder().decode(WordResult.self, from: data)
                                     
-                                    // Data convert
-                                    var result: WordResult?
+        }
+        catch {
+            print("error")
+        }
                                     
-                                    do {
-                                        result = try JSONDecoder().decode(WordResult.self, from: data)
-                                    }
+        guard let endResult = result else {
+            return
+        }
                                     
-                                    catch {
-                                        print("error")
-                                    }
-                                    
-                                    guard let endResult = result else {
-                                        return
-                                    }
-                                    
-                                    // Update array
-                                    // SOMETHING MISSING HERE (newWord for word)
-                                    //let newWord = endResult.word
-                                    let newWords = endResult.definitions
-                                    self.words.append(contentsOf: newWords)
-                                    
-                                    // Refresh
-                                    DispatchQueue.main.async {
-                                        self.table.reloadData()
-                                    }
-                                    
-        }).resume()
+        // Update array
+        let newWords = endResult.definitions
+        self.words.append(contentsOf: newWords)
+        
+        // Refresh TableView
+        DispatchQueue.main.async {
+            self.table.reloadData()
+        }
+        
+    }).resume()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
