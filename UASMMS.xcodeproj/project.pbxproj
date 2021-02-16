@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12179B7425DBA01B00C0A954 /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12179B7225DBA01B00C0A954 /* WordTableViewCell.swift */; };
+		12179B7525DBA01B00C0A954 /* WordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12179B7325DBA01B00C0A954 /* WordTableViewCell.xib */; };
 		1287692725DA912300B0516F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1287692625DA912300B0516F /* AppDelegate.swift */; };
 		1287692925DA912300B0516F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1287692825DA912300B0516F /* SceneDelegate.swift */; };
 		1287692B25DA912300B0516F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1287692A25DA912300B0516F /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12179B7225DBA01B00C0A954 /* WordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
+		12179B7325DBA01B00C0A954 /* WordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTableViewCell.xib; sourceTree = "<group>"; };
 		1287692325DA912300B0516F /* UASMMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UASMMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1287692625DA912300B0516F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1287692825DA912300B0516F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,6 +113,8 @@
 				1287693425DA912400B0516F /* LaunchScreen.storyboard */,
 				1287693725DA912400B0516F /* Info.plist */,
 				1287692F25DA912300B0516F /* UASMMS.xcdatamodeld */,
+				12179B7225DBA01B00C0A954 /* WordTableViewCell.swift */,
+				12179B7325DBA01B00C0A954 /* WordTableViewCell.xib */,
 			);
 			path = UASMMS;
 			sourceTree = "<group>";
@@ -235,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1287693625DA912400B0516F /* LaunchScreen.storyboard in Resources */,
+				12179B7525DBA01B00C0A954 /* WordTableViewCell.xib in Resources */,
 				1287693325DA912400B0516F /* Assets.xcassets in Resources */,
 				1287692E25DA912300B0516F /* Main.storyboard in Resources */,
 			);
@@ -265,6 +272,7 @@
 				1287693125DA912300B0516F /* UASMMS.xcdatamodeld in Sources */,
 				1287692725DA912300B0516F /* AppDelegate.swift in Sources */,
 				1287692925DA912300B0516F /* SceneDelegate.swift in Sources */,
+				12179B7425DBA01B00C0A954 /* WordTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
