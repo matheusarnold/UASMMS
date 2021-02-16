@@ -42,7 +42,5 @@ class WordTableViewCell: UITableViewCell {
         
         self.wordTypeLabel.text = model.type
         self.wordDefLabel.text = model.definition
-        
     }
-    
 }

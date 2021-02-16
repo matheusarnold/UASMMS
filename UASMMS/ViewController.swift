@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var searchBar: UITextField!
-    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet var searchBar: UITextField!
+    @IBOutlet var errorLabel: UILabel!
     @IBOutlet var table: UITableView!
     
     var words = [Word]()
@@ -40,43 +40,39 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     func searchWord(){
         searchBar.resignFirstResponder()
-        
         guard let text = searchBar.text, !text.isEmpty else {
             return
         }
         
         let query = text
-        
         words.removeAll()
         
         URLSession.shared.dataTask(with: URL(string: "https://myawesomedictionary.herokuapp.com/words?q=\(query)")!, completionHandler: {data, response, error in guard let data = data, error == nil else {
-            return
-        }
-        // Data convert
-        var result: WordResult?
+                return
+            }
+            // Data convert
+            var result: WordResult?
         
-        do {
-            result = try JSONDecoder().decode(WordResult.self, from: data)
-                                    
-        }
-        catch {
-            print("error")
-        }
-                                    
-        guard let endResult = result else {
-            return
-        }
-                                    
-        // Update array
-        let newWords = endResult.definitions
-        self.words.append(contentsOf: newWords)
-        
-        // Refresh TableView
-        DispatchQueue.main.async {
-            self.table.reloadData()
-        }
-        
-    }).resume()
+            do {
+                result = try JSONDecoder().decode(WordResult.self, from: data)
+            }
+            
+            catch {
+                print("error")
+            }
+                                        
+            guard let endResult = result else {
+                return
+            }
+            // Update array
+            let newWords = endResult.definitions
+            self.words.append(contentsOf: newWords)
+            
+            // Refresh TableView
+            DispatchQueue.main.async {
+                self.table.reloadData()
+            }
+        }).resume()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -93,9 +89,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         if (textfield.text?.count ?? 0 < 3) {
             errorLabel.text = "Please enter more than 2 characters"
         }
-        
-        // if (ga ada hasil)
-        
         else {
             errorLabel.text = ""
         }
