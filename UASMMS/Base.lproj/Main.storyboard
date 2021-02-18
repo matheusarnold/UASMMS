@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dictionary App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hj-EL-XhB">
-                                <rect key="frame" x="25" y="94" width="364" height="29"/>
+                                <rect key="frame" x="25" y="94" width="166.5" height="29"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,23 +37,30 @@
                                 <rect key="frame" x="25" y="232" width="364" height="605"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzt-xb-rJf">
+                                <rect key="frame" x="216.5" y="89" width="172.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Random Word"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="l4q-TS-izM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Fgk-Ml-VoD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3j1-ED-3Ag" secondAttribute="trailing" constant="25" id="Hhk-du-25O"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7hj-EL-XhB" secondAttribute="trailing" constant="25" id="IXd-UH-7LE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l4q-TS-izM" secondAttribute="trailing" constant="25" id="NKo-Jc-uez"/>
+                            <constraint firstItem="l4q-TS-izM" firstAttribute="top" secondItem="tzt-xb-rJf" secondAttribute="bottom" constant="25" id="PES-4N-W4q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KoP-1J-1ux" secondAttribute="trailing" constant="25" id="PFy-f7-pQU"/>
                             <constraint firstItem="7hj-EL-XhB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="UAc-sI-UCf"/>
                             <constraint firstItem="KoP-1J-1ux" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="V8e-Mq-AJs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tzt-xb-rJf" secondAttribute="trailing" constant="25" id="VTD-3f-w06"/>
                             <constraint firstItem="3j1-ED-3Ag" firstAttribute="top" secondItem="l4q-TS-izM" secondAttribute="bottom" constant="25" id="cHu-2a-P2y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KoP-1J-1ux" secondAttribute="bottom" constant="25" id="fZ4-S1-yNb"/>
                             <constraint firstItem="KoP-1J-1ux" firstAttribute="top" secondItem="3j1-ED-3Ag" secondAttribute="bottom" constant="25" id="oHo-o4-SaO"/>
                             <constraint firstItem="7hj-EL-XhB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="qxG-X0-NCh"/>
                             <constraint firstItem="3j1-ED-3Ag" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="sPB-Sh-tOb"/>
                             <constraint firstItem="l4q-TS-izM" firstAttribute="top" secondItem="7hj-EL-XhB" secondAttribute="bottom" constant="25" id="szm-fX-XWB"/>
+                            <constraint firstItem="tzt-xb-rJf" firstAttribute="leading" secondItem="7hj-EL-XhB" secondAttribute="trailing" constant="25" id="vbN-8T-3q3"/>
                         </constraints>
                     </view>
                     <connections>

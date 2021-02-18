@@ -41,22 +41,29 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Fr-RW-0dC">
-                        <rect key="frame" x="150" y="120" width="404" height="87"/>
+                        <rect key="frame" x="150" y="120" width="404" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hi-gy-SIT">
+                        <rect key="frame" x="150" y="160.5" width="424" height="57.5"/>
+                        <state key="normal" title="Favorite"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="ttI-j8-zJZ" firstAttribute="leading" secondItem="SIf-FG-GOn" secondAttribute="trailing" constant="20" id="1uX-eV-2HZ"/>
                     <constraint firstItem="3Fr-RW-0dC" firstAttribute="top" secondItem="xAH-Oo-xht" secondAttribute="bottom" constant="20" id="3GK-89-1kx"/>
                     <constraint firstItem="3Fr-RW-0dC" firstAttribute="leading" secondItem="SIf-FG-GOn" secondAttribute="trailing" constant="20" id="4Uq-jP-1d3"/>
+                    <constraint firstItem="1hi-gy-SIT" firstAttribute="leading" secondItem="SIf-FG-GOn" secondAttribute="trailing" constant="20" id="BGH-IU-voo"/>
                     <constraint firstAttribute="bottomMargin" secondItem="SIf-FG-GOn" secondAttribute="bottom" constant="10" id="CQO-q6-ZUN"/>
+                    <constraint firstAttribute="bottom" secondItem="1hi-gy-SIT" secondAttribute="bottom" constant="20" id="Dgz-TL-ugE"/>
                     <constraint firstItem="SIf-FG-GOn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="EcB-w1-TUR"/>
                     <constraint firstAttribute="trailingMargin" secondItem="xAH-Oo-xht" secondAttribute="trailing" constant="10" id="G1T-Yy-XY2"/>
                     <constraint firstItem="xAH-Oo-xht" firstAttribute="leading" secondItem="SIf-FG-GOn" secondAttribute="trailing" constant="20" id="NLM-er-T61"/>
+                    <constraint firstItem="1hi-gy-SIT" firstAttribute="top" secondItem="3Fr-RW-0dC" secondAttribute="bottom" constant="20" id="dMt-vS-JJF"/>
                     <constraint firstItem="xAH-Oo-xht" firstAttribute="top" secondItem="ttI-j8-zJZ" secondAttribute="bottom" constant="20" id="fNt-9X-VrW"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="3Fr-RW-0dC" secondAttribute="bottom" constant="20" id="hPm-DW-LLB"/>
+                    <constraint firstAttribute="trailing" secondItem="1hi-gy-SIT" secondAttribute="trailing" constant="10" id="j42-Ah-50T"/>
                     <constraint firstAttribute="trailing" secondItem="ttI-j8-zJZ" secondAttribute="trailing" constant="10" id="kxl-bu-1Ug"/>
                     <constraint firstItem="ttI-j8-zJZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="pmd-so-OEE"/>
                     <constraint firstAttribute="trailingMargin" secondItem="3Fr-RW-0dC" secondAttribute="trailing" constant="10" id="rZB-ds-FPj"/>

@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     @IBOutlet var errorLabel: UILabel!
     @IBOutlet var table: UITableView!
     
+    var theWord = [WordResult]()
     var words = [Word]()
     
     override func viewDidLoad() {
@@ -52,7 +53,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             }
             // Data convert
             var result: WordResult?
-        
             do {
                 result = try JSONDecoder().decode(WordResult.self, from: data)
             }
@@ -60,14 +60,12 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
             catch {
                 print("error")
             }
-                                        
             guard let endResult = result else {
                 return
             }
             // Update array
             let newWords = endResult.definitions
             self.words.append(contentsOf: newWords)
-            
             // Refresh TableView
             DispatchQueue.main.async {
                 self.table.reloadData()
